@@ -1,0 +1,73 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: helvetica, sans-serif, arial;
+}
+
+/********* global-settings ********/
+html {
+    /* sets the background image */
+    background: url(images/burma.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/**********************************/
+
+/*********** nav-top **************/
+.nav-top ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-top li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.nav-top a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    /* allows the animation to be underneath the anchor elements */
+    position: relative;
+}
+
+.nav-top a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-top a:hover:after {
+    width: 100%; 
+    left: 0; 
+}
+/**********************************/
+.nav-logo a {
+    text-decoration: none;
+}
+
+.nav-logo h1 {
+    display: flex;
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0 15px;
+    font-size: 30px;
+}
+
+.nav-logo a:visited {
+    /* sets the default purple color to white */
+    color: #fff;
+}
