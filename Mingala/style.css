@@ -1,10 +1,9 @@
+/********* global-settings ********/
 * {
     margin: 0px;
     padding: 0px;
     font-family: helvetica, sans-serif, arial;
 }
-
-/********* global-settings ********/
 html {
     /* sets the background image */
     background: url(images/burma.jpg) no-repeat center center fixed;
@@ -13,9 +12,24 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+
+a:visited {
+    /* sets the default purple color to white */
+    color: #fff;
+}
 /**********************************/
 
+/******** main-container **********/
+.main-container {
+    padding: 50px 100px 50px 100px;
+}
+/**********************************/
 /*********** nav-top **************/
+.nav-top {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+}
 .nav-top ul {
     display: flex;
     justify-content: flex-end;
@@ -23,20 +37,20 @@ html {
 
 .nav-top li {
     list-style: none;
-    margin: 0 15px;
+    margin: 0px 15px;
 }
 
-.nav-top a {
+.nav-bar li a {
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     /* allows the animation to be underneath the anchor elements */
     position: relative;
 }
 
-.nav-top a:after {
+.nav-top ul a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -51,23 +65,90 @@ html {
 
 .nav-top a:hover:after {
     width: 100%; 
-    left: 0; 
+    left: 0;
 }
 /**********************************/
-.nav-logo a {
+/************ nav-logo ************/
+.nav-logo h1 a {
+    font-family: 'Bevan', cursive;
     text-decoration: none;
-}
-
-.nav-logo h1 {
-    display: flex;
-    display: inline;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    padding: 0 15px;
-    font-size: 30px;
+    font-size: 60px;
 }
 
-.nav-logo a:visited {
-    /* sets the default purple color to white */
+.nav-logo p {
+    color: #f67e7d;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Zilla Slab', serif;
+    letter-spacing: 0.05em;
+}
+/**********************************/
+
+/****** grid-container-top *******/
+.grid-container-top {
+    display: grid;
+    grid-template-rows: 200px auto auto;
+    grid-template-columns: 350px 940px;
+    align-self: start;
+    column-gap: 400px;
+    margin-top: 60px;
+}
+/************** info **************/
+.info {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 1;
     color: #fff;
 }
+
+.info a {
+    color: orange;
+}
+
+.info p {
+    padding-bottom: 10px;
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+}
+/**********************************/
+/************ promotion ***********/
+.promotion  {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    text-align: center;
+}
+
+.promotion ul {
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    background-color: #fff291;
+    border-radius: 100px;
+}
+.promotion li {
+    list-style: none;
+    color: #000;
+    font-size: 35px;
+    margin: 50px;
+    text-transform: uppercase;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.1em;
+}
+/**********************************/
+/************ video ***************/
+.video iframe {
+    padding-top: 50px;
+    width: 939px;
+    height: 527px;
+}
+/**********************************/
+
+/**********************************/
+
+/***** grid-container-bottom ******/
+
+/**********************************/
